@@ -19,8 +19,6 @@ magnifier.className = 'magnifier';
 imageContainer.appendChild(magnifier);
 
 
-
-// Fetch images from Lorem Picsum
 async function fetchImages() {
     try {
         const response = await fetch('https://picsum.photos/v2/list?page=1&limit=10');
@@ -179,8 +177,8 @@ function handleZoom(e) {
     const yPercent = (y / rect.height) * 100;
 
 
-    magnifier.style.left = `${x - 100}px`;
-    magnifier.style.top = `${y - 100}px`;
+    magnifier.style.left = `${x - 150}px`;
+    magnifier.style.top = `${y - 150}px`;
 
 
     magnifier.style.backgroundImage = `url(${mainImage.src})`;

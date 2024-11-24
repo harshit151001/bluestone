@@ -48,7 +48,7 @@ body {
 
 .image-container {
     position: relative;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .thumbnails-container {
@@ -136,7 +136,7 @@ body {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgb(255,255, 255, 0.2);
+    background: rgb(255,255, 255, 0.4);
     border: none;
     width: 48px;
     height: 48px;
@@ -152,8 +152,12 @@ body {
 }
 
 .carousel-button:hover {
-    background: rgb(255,255, 255, 0.4);
+    background: rgb(255,255, 255, 0.6);
     transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-button:hover ~ .magnifier{
+    display: none !important;
 }
 
 .prev {
@@ -196,7 +200,7 @@ body {
     margin-top: 10px;
 }
 
-.variant-selector label {
+.variant-selector, .quantity-selector label {
     display: block;
     font-size: 1.1em;
     font-weight: 500;
@@ -301,12 +305,13 @@ select:hover {
     display: none;
     position: absolute;
     pointer-events: none;
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     border: 1px solid #fff;
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
     background-repeat: no-repeat;
     z-index: 2;
+    transition: all 0.3s ease;
 }
 
 @media (hover: hover) {
