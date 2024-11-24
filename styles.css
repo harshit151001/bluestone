@@ -277,7 +277,7 @@ select:hover {
 .confirmation {
     display: none;
     position: fixed;
-    top: 20px;
+    top: 100px;
     right: 20px;
     padding: 16px 32px;
     background-color: #28a745;
@@ -311,7 +311,6 @@ select:hover {
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
     background-repeat: no-repeat;
     z-index: 2;
-    transition: all 0.3s ease;
 }
 
 @media (hover: hover) {
@@ -424,8 +423,6 @@ select:hover {
     border-radius: 1rem;
 }
 
-/* Add these media queries at the end of your CSS file */
-
 @media (max-width: 768px) {
 
     body{
@@ -457,10 +454,9 @@ select:hover {
         height: 80px;
     }
 
-    /* Product info adjustments */
     .product-info {
         padding: 16px;
-        padding-bottom: 80px; /* Space for fixed add to cart button */
+        padding-bottom: 80px;
     }
 
     .product-title {
@@ -471,7 +467,6 @@ select:hover {
         font-size: 1.6em;
     }
 
-    /* Fixed add to cart button */
     .add-to-cart {
         position: fixed;
         bottom: 0;
@@ -482,25 +477,25 @@ select:hover {
         z-index: 1000;
     }
 
-    /* Responsive navigation */
+
     .nav-container {
         padding: 0.75rem 1rem;
     }
 
     .nav-center {
-        display: none; /* Hide search on mobile */
+        display: none; 
     }
 
     .nav-right {
         gap: 1rem;
     }
 
-    /* Show only essential nav items */
+
     .nav-right a:not(.cart-link) {
         display: none;
     }
 
-    /* Add mobile menu button */
+    
     .mobile-menu-button {
         display: block;
         background: none;
@@ -509,7 +504,7 @@ select:hover {
         cursor: pointer;
     }
 
-    /* Confirmation message adjustment */
+   
     .confirmation {
         left: 16px;
         right: 16px;
@@ -519,7 +514,7 @@ select:hover {
     }
 }
 
-/* Small mobile devices */
+
 @media (max-width: 480px) {
     body {
         padding-top: 60px;
@@ -550,7 +545,7 @@ select:hover {
     }
 }
 
-/* Add slide-up animation for add to cart button */
+
 @keyframes slideUp {
     from {
         transform: translateY(100%);
@@ -560,7 +555,7 @@ select:hover {
     }
 }
 
-/* Apply animation to fixed add to cart button */
+
 @media (max-width: 768px) {
     .add-to-cart {
         animation: slideUp 0.3s ease-out;
